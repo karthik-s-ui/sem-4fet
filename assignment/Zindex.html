@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-Index Card Example</title>
+
+<style>
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#222;
+        font-family:Arial;
+    }
+
+    .container{
+        position:relative;
+        width:500px;
+        height:300px;
+    }
+
+    /* COMMON CARD STYLE */
+    .card{
+        position:absolute;
+        width:220px;
+        height:140px;
+        border-radius:15px;
+        color:white;
+        font-size:28px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        cursor:pointer;
+        transition:0.4s;
+    }
+
+    /* CARD POSITIONS */
+    #card1{
+        background:crimson;
+        top:20px;
+        left:20px;
+        z-index:1;
+    }
+
+    #card2{
+        background:royalblue;
+        top:70px;
+        left:120px;
+        z-index:2;
+    }
+
+    #card3{
+        background:seagreen;
+        top:120px;
+        left:220px;
+        z-index:3;
+    }
+
+    /* ACTIVE CARD */
+    .active{
+        transform:scale(1.1);
+        box-shadow:0 0 25px rgba(255,255,255,0.5);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="card1" class="card active"
+         onclick="bringFront('card1')">
+         CARD 1
+    </div>
+
+    <div id="card2" class="card"
+         onclick="bringFront('card2')">
+         CARD 2
+    </div>
+
+    <div id="card3" class="card"
+         onclick="bringFront('card3')">
+         CARD 3
+    </div>
+
+</div>
+
+<script>
+
+    let highestZ = 3;
+
+    function bringFront(cardId){
+
+        // remove active effect from all cards
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card=>{
+            card.classList.remove('active');
+        });
+
+        // select clicked card
+        const selectedCard = document.getElementById(cardId);
+
+        // increase z-index
+        highestZ++;
+
+        selectedCard.style.zIndex = highestZ;
+
+        // add active effect
+        selectedCard.classList.add('active');
+    }
+
+</script>
+
+</body>
+</html>
