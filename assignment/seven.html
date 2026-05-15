@@ -1,61 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  <title>Karthik Portfolio</title>
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+  <style>
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    body{
+      font-family: Arial;
+      background: #0b1120;
+      text-align: center;
+      color: white;
+    }
+
+    .card{
+      width: 60%;
+      margin: auto;
+      margin-top: 60px;
+      background: #111827;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #06b6d4;
+    }
+
+    h1{
+      color: #f472b6;
+      font-size: 50px;
+    }
+
+    #role{
+      color: #22d3ee;
+    }
+
+    .skills{
+      background: #1e293b;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .skills p{
+      color: #e2e8f0;
+    }
+
+    button{
+      margin-top: 20px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #f472b6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a{
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      background: #22d3ee;
+      color: black;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<h2>HTML Table</h2>
+  <div class="card">
 
-<table>
-  <tr>
-    <th>Project Name</th>
-    <th>Status</th>
-    <th>Deadline</th>
-  </tr>
-  <tr>
-    <td>Front-End Portfolio(FET)</td>
-    <td> in progress</td>
-    <td>April 10,2026</td>
-  </tr>
-  <tr>
-    <td>Database Mini Project (DBMS)</td>
-    <td>Pending</td>
-    <td>April 20,2026</td>
-  </tr>
-  <tr>
-    <td>Operating Systems case study</td>
-    <td>completed</td>
-    <td>March 30, 2026</td>
-  </tr>
-  <tr>
-    <td>Design & analysis of Algorithm projects</td>
-    <td>In progress</td>
-    <td>April 25,2026</td>
-  </tr>
-  <tr>
-    <td>Environmental Studies</td>
-    <td>Pending</td>
-    <td>May 5,2026</td>
-  </tr>
-  
-</table>
+    <h1>Karthik</h1>
+
+    <h2 id="role">
+      Cybersecurity Enthusiast
+    </h2>
+
+    <div class="skills">
+
+      <p>✔ HTML, CSS, JavaScript</p>
+
+      <p>✔ Python & C</p>
+
+      <p>✔ Cybersecurity & CTFs</p>
+
+      <p>✔ Quick Learner</p>
+
+    </div>
+
+    <button onclick="changeRole()">
+      Change Role
+    </button>
+
+    <br>
+
+    <a href="https://karthikprabhu07.github.io/karthikprabhu_sem4-fet/">
+      Home Page
+    </a>
+
+  </div>
+
+  <script>
+
+    function changeRole(){
+
+      // ALERT demonstration
+      alert("You are about to change the role!");
+
+      // PROMPT demonstration
+      let role = prompt(
+        "Enter New Role",
+        document.getElementById("role").innerHTML
+      );
+
+      // Update role if input is not empty
+      if(role != "" && role != null){
+
+        document.getElementById("role").innerHTML = role;
+
+        // ALERT after update
+        alert("Role updated successfully!");
+
+      }
+      else{
+
+        alert("No changes made.");
+
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
