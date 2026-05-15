@@ -12,7 +12,10 @@
         display:flex;
         justify-content:center;
         align-items:center;
-        background:#222;
+
+        /* darker outside background */
+        background:#7fa89b;
+
         font-family:Arial;
     }
 
@@ -20,6 +23,15 @@
         position:relative;
         width:500px;
         height:300px;
+
+        /* inside background */
+        background:#9fc7bb;
+
+        border-radius:20px;
+
+        padding:20px;
+
+        box-shadow:0 8px 25px rgba(0,0,0,0.25);
     }
 
     /* COMMON CARD STYLE */
@@ -35,6 +47,7 @@
         align-items:center;
         cursor:pointer;
         transition:0.4s;
+        font-weight:bold;
     }
 
     /* CARD POSITIONS */
