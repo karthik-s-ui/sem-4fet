@@ -58,6 +58,10 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+button:hover{
+    background-color: #13856d;
+}
 </style>
 </head>
 
@@ -69,7 +73,7 @@ button {
 
 <p>I'm studying in Mangalore Institute of Technology and Engineering college</p>
 
-<a href="https://karthik-s-ui.github.io/sem-4fet/">
+<a href="https://karthik-s-ui.github.io/sem-4fet/assignment/KarthikHomepage.html">
     Home page link
 </a>
 
@@ -88,16 +92,13 @@ alt="College Image" width="500">
 
 function changeRole(){
 
-    // Alert demonstration
     alert("You are about to change your role!");
 
-    // Prompt demonstration
     let newRole = prompt(
         "Enter your new role:",
         document.getElementById("role").innerHTML
     );
 
-    // Validation using JavaScript
     if(newRole != null && newRole != ""){
 
         document.getElementById("role").innerHTML = newRole;
