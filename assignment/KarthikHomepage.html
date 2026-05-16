@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik S Portfolio</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            min-height:100vh;
+            font-family:Arial,sans-serif;
+            background:#7fa89b;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+
+        .main{
+            width:100%;
+            max-width:1200px;
+            display:grid;
+            grid-template-columns:320px 1fr;
+            gap:25px;
+        }
+
+        .left{
+            background:#2f4f4f;
+            border-radius:30px;
+            padding:40px 25px;
+            color:white;
+            box-shadow:0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .heart{
+            font-size:75px;
+            text-align:center;
+            margin-bottom:15px;
+        }
+
+        .left h1{
+            text-align:center;
+            font-size:42px;
+            margin-bottom:15px;
+            color:#ffffff;
+        }
+
+        .left p{
+            text-align:center;
+            color:#edf7f4;
+            line-height:1.7;
+        }
+
+        .right{
+            background:#2f4f4f;
+            border-radius:30px;
+            padding:35px;
+            box-shadow:0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .right h2{
+            color:white;
+            font-size:38px;
+            margin-bottom:30px;
+        }
+
+        .assignments{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#4f6f6f;
+            border-radius:22px;
+            padding:24px;
+            transition:0.3s;
+            border:1px solid #6f8f8f;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 0 18px rgba(0,0,0,0.3);
+        }
+
+        .card h3{
+            color:#dff6f0;
+            margin-bottom:12px;
+            font-size:24px;
+        }
+
+        .card p{
+            color:#edf7f4;
+            line-height:1.5;
+            margin-bottom:18px;
+            font-size:14px;
+        }
+
+        .card a{
+            text-decoration:none;
+            background:#1f3b3b;
+            color:white;
+            padding:10px 18px;
+            border-radius:10px;
+            display:inline-block;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .card a:hover{
+            background:#142828;
+        }
+
+        .bottom{
+            text-align:center;
+            color:#edf7f4;
+            margin-top:35px;
+            font-size:16px;
+        }
+
+        @media(max-width:900px){
+
+            .main{
+                grid-template-columns:1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="left">
+
+            <div class="heart">💙</div>
+
+            <h1>Karthik S</h1>
+
+            <p>
+                Welcome to my creative web portfolio.<br>
+                Explore all assignments and frontend projects here.
+            </p>
+
+        </div>
+
+        <div class="right">
+
+            <h2>📂 My Assignments</h2>
+
+            <div class="assignments">
+
+                <div class="card">
+                    <h3>Assignment 1</h3>
+                    <p>Basic webpage structure using HTML.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/one.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 2</h3>
+                    <p>Responsive webpage with CSS styling.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/three.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 3</h3>
+                    <p>Creative design with hover animations.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/six.htm" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 4</h3>
+                    <p>JavaScript interaction and effects.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/four.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 5</h3>
+                    <p>Card layouts and modern UI design.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/five.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 6</h3>
+                    <p>Frontend mini webpage project.</p>
+                    <a href="#">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 7</h3>
+                    <p>Creative CSS transition effects.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/seven.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 8</h3>
+                    <p>Responsive navigation bar design.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/cssone.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 9</h3>
+                    <p>JavaScript DOM manipulation task.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/csstwo.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 10</h3>
+                    <p>Interactive buttons and animations.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/two_js_css.html" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 11</h3>
+                    <p>Modern webpage layout experiment.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/Zindex" target="_blank">Open</a>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 12</h3>
+                    <p>Complete frontend portfolio task.</p>
+                    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/four_js_css.html" target="_blank">Open</a>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                Made with 💙 by Karthik S
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
