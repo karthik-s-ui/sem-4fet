@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial,sans-serif;
+
+    /* darker outside background */
+    background:#7fa89b;
+
+    overflow:hidden;
+}
+
+.container{
+
+    width:90%;
+    max-width:460px;
+
+    padding:50px;
+
+    border-radius:28px;
+
+    /* inside box color */
+    background:#9fc7bb;
+
+    border:1px solid #6b9085;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+h1{
+
+    font-size:44px;
+
+    margin-bottom:14px;
+
+    color:#134e4a;
+}
+
+#status{
+
+    color:#1e293b;
+
+    margin-bottom:26px;
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+input{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    margin-bottom:24px;
+
+    background:#d7ebe4;
+
+    color:#0f172a;
+
+    border:1px solid #6b9085;
+}
+
+input::placeholder{
+    color:#475569;
+}
+
+button{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:#0f766e;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+    background:#115e59;
+}
+
+#attempts{
+
+    margin-top:22px;
+
+    font-size:18px;
+
+    color:#1e293b;
+
+    font-weight:bold;
+}
+
+#homepage{
+
+    display:inline-block;
+
+    margin-top:24px;
+
+    padding:13px 24px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    background:#134e4a;
+
+    color:white;
+
+    font-size:17px;
+
+    transition:0.3s;
+}
+
+#homepage:hover{
+
+    background:#0f766e;
+
+    transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Secure Login</h1>
+
+    <h3 id="status">
+        Enter Password
+    </h3>
+
+    <input
+    type="password"
+    id="password"
+    placeholder="Enter Secure Password">
+
+    <button id="loginBtn">
+        Login
+    </button>
+
+    <p id="attempts">
+        Attempts Left : 3
+    </p>
+
+    <a
+    id="homepage"
+    href="https://karthikprabhu07.github.io/karthikprabhu_sem4-fet/">
+
+        Home Page
+
+    </a>
+
+</div>
+
+<script>
+
+let correctPassword = "Subbu";
+
+let attempts = 3;
+
+document
+.getElementById("password")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+
+        event.preventDefault();
+
+        document
+        .getElementById("loginBtn")
+        .click();
+    }
+
+});
+
+document
+.getElementById("loginBtn")
+.onclick = function(){
+
+    let userPassword =
+    document
+    .getElementById("password")
+    .value;
+
+    let isChecked = false;
+
+    let hiddenPassword = "";
+
+    let i = 0;
+
+    while(i < userPassword.length){
+
+        hiddenPassword += "*";
+
+        i++;
+    }
+
+    console.log("Hidden Password :", hiddenPassword);
+
+    do{
+
+        if(userPassword == correctPassword){
+
+            document
+            .getElementById("status")
+            .innerHTML =
+            "✅ Access Granted";
+
+            alert("Welcome User!");
+
+            isChecked = true;
+        }
+
+        else{
+
+            attempts--;
+
+            document
+            .getElementById("attempts")
+            .innerHTML =
+            "Attempts Left : " + attempts;
+
+            if(attempts == 0){
+
+                document
+                .getElementById("status")
+                .innerHTML =
+                "❌ Access Locked";
+
+                document
+                .getElementById("loginBtn")
+                .disabled = true;
+
+                document
+                .getElementById("password")
+                .disabled = true;
+            }
+
+            else{
+
+                document
+                .getElementById("status")
+                .innerHTML =
+                "❌ Incorrect Password";
+
+                alert("Wrong Password!");
+
+                document
+                .getElementById("password")
+                .value = "";
+            }
+
+            isChecked = true;
+        }
+
+    }while(!isChecked);
+
+}
+
+</script>
+
+</body>
+
+</html>
