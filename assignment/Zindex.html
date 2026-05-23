@@ -10,12 +10,10 @@
         margin:0;
         height:100vh;
         display:flex;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
-
-        /* darker outside background */
         background:#7fa89b;
-
         font-family:Arial;
     }
 
@@ -23,14 +21,9 @@
         position:relative;
         width:500px;
         height:300px;
-
-        /* inside background */
         background:#9fc7bb;
-
         border-radius:20px;
-
         padding:20px;
-
         box-shadow:0 8px 25px rgba(0,0,0,0.25);
     }
 
@@ -77,8 +70,34 @@
         transform:scale(1.1);
         box-shadow:0 0 25px rgba(255,255,255,0.5);
     }
+
+    /* Navigation Buttons */
+    .nav-buttons{
+        margin-top:25px;
+    }
+
+    .nav-buttons a{
+        text-decoration:none;
+    }
+
+    .nav-buttons button{
+        padding:10px 15px;
+        margin:5px;
+        border:none;
+        border-radius:8px;
+        background:#134e4a;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    }
+
+    .nav-buttons button:hover{
+        background:#0f766e;
+    }
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -97,6 +116,32 @@
          onclick="bringFront('card3')">
          CARD 3
     </div>
+
+</div>
+
+<!-- Navigation Buttons Outside the Box -->
+<div class="nav-buttons">
+
+    <!-- Previous Assignment -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/two_js_css.html">
+        <button>
+            <- Previous Assignment
+        </button>
+    </a>
+
+    <!-- Home Page -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/KarthikHomepage.html">
+        <button>
+            Home Page
+        </button>
+    </a>
+
+    <!-- Next Assignment -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/four_js_css.html">
+        <button>
+            12'th Assignment ->
+        </button>
+    </a>
 
 </div>
 
