@@ -7,7 +7,7 @@
 
     body{
       font-family: Arial;
-      background-color: #7fa89b;   /* darker outside background */
+      background-color: #7fa89b;
       text-align: center;
       color: white;
     }
@@ -16,7 +16,7 @@
       width: 60%;
       margin: auto;
       margin-top: 60px;
-      background-color: #9fc7bb;   /* requested inside block color */
+      background-color: #9fc7bb;
       padding: 30px;
       border-radius: 15px;
       border: 2px solid #0f766e;
@@ -100,8 +100,21 @@
 
     <br>
 
+    <!-- Home Page Button -->
     <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/KarthikHomepage.html">
       Home Page
+    </a>
+
+    <br>
+
+    <!-- Previous Assignment Button -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/index.html">
+      <- Previous Assignment
+    </a>
+
+    <!-- Next Assignment Button -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/cssone.html">
+      Eighth Assignment ->
     </a>
 
   </div>
@@ -110,21 +123,17 @@
 
     function changeRole(){
 
-      // ALERT demonstration
       alert("You are about to change the role!");
 
-      // PROMPT demonstration
       let role = prompt(
         "Enter New Role",
         document.getElementById("role").innerHTML
       );
 
-      // Update role if input is not empty
       if(role != "" && role != null){
 
         document.getElementById("role").innerHTML = role;
 
-        // ALERT after update
         alert("Role updated successfully!");
 
       }
