@@ -12,7 +12,7 @@
 
         input, select, button {
             margin: 5px;
-            padding: 5px;
+            padding: 8px;
         }
 
         ul {
@@ -20,8 +20,30 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        .nav-buttons{
+            margin-top: 30px;
+        }
+
+        .nav-buttons a{
+            text-decoration: none;
+        }
+
+        .nav-buttons button{
+            background-color: #134e4a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .nav-buttons button:hover{
+            background-color: #0f766e;
+        }
     </style>
 </head>
+
 <body>
 
 <h1>Technical Skills</h1>
@@ -62,6 +84,32 @@
         </ul>
     </li>
 </ol>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+
+    <!-- Previous Assignment -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/csstwo.html">
+        <button>
+            <- Previous Assignment
+        </button>
+    </a>
+
+    <!-- Home Page -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/KarthikHomepage.html">
+        <button>
+            Home Page
+        </button>
+    </a>
+
+    <!-- Next Assignment -->
+    <a href="https://karthik-s-ui.github.io/sem-4fet/assignment/Zindex">
+        <button>
+            11'th Assignment ->
+        </button>
+    </a>
+
+</div>
 
 <script>
 function getList() {
